@@ -16,7 +16,7 @@
     
     //game constant
     export class Game{
-        public static FPS:number = 120;
+        public static FPS:number = 60;
     }
 
 }

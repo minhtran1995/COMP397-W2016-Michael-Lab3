@@ -19,7 +19,7 @@ var config;
     var Game = (function () {
         function Game() {
         }
-        Game.FPS = 120;
+        Game.FPS = 60;
         return Game;
     })();
     config.Game = Game;
