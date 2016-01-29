@@ -2,7 +2,7 @@
 var CScreen = config.Screen;
 var canvas;
 var stage;
-var helloLabel;
+var menu;
 var myFunction = new function () {
     // Anonymous
     // Faster speed
@@ -16,17 +16,11 @@ function init() {
 }
 // Main game loop function that handle what happen each "tick or each frame
 function gameLoop(event) {
-    helloLabel.rotation += 45;
+    menu.update();
     stage.update();
 }
 function main() {
-    console.log("Game Started !");
-    helloLabel = new createjs.Text("Hello World", "60px Arial", "#248f24");
-    helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
-    helloLabel.regY = helloLabel.getMeasuredHeight() * 0.5;
-    helloLabel.x = config.Screen.CENTER_X;
-    helloLabel.y = CScreen.CENTER_Y;
-    stage.addChild(helloLabel);
+    menu = new scene.Menu();
 }
 /*
 
