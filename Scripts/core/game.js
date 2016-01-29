@@ -14,7 +14,7 @@ function init() {
     main();
 }
 function gameLoop(event) {
-    helloLabel.rotation += 1;
+    helloLabel.rotation += 15;
     stage.update();
 }
 function main() {
