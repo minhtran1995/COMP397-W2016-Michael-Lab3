@@ -21,7 +21,7 @@ function init(): void {
 }
 
 function gameLoop(event: createjs.Event): void {
-    helloLabel.rotation+= 15;
+    helloLabel.rotation+= 50;
     stage.update();
 }
 
