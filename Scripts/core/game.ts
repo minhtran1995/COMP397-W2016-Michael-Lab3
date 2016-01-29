@@ -23,7 +23,7 @@ function init(): void {
 
 // Main game loop function that handle what happen each "tick or each frame
 function gameLoop(event: createjs.Event): void {
-    helloLabel.rotation+= 35;
+    helloLabel.rotation+= 30;
     stage.update();
 }
 
