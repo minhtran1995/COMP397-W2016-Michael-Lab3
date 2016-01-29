@@ -1,4 +1,5 @@
 /// <reference path="_reference.ts"/>
+var CScreen = config.Screen;
 var canvas;
 var stage;
 var helloLabel;
@@ -9,21 +10,22 @@ var myFunction = new function () {
 function init() {
     canvas = document.getElementById("canvas");
     stage = new createjs.Stage(canvas);
-    createjs.Ticker.setFPS(60); // set framerate to 60FPS
+    createjs.Ticker.setFPS(config.Game.FPS); // set framerate to 60FPS
     createjs.Ticker.on("tick", gameLoop, this);
     main();
 }
+// Main game loop function that handle what happen each "tick or each frame
 function gameLoop(event) {
-    helloLabel.rotation += 50;
+    helloLabel.rotation += 45;
     stage.update();
 }
 function main() {
     console.log("Game Started !");
-    helloLabel = new createjs.Text("Hello World", "60px Arial", "#ff7700");
+    helloLabel = new createjs.Text("Hello World", "60px Arial", "#248f24");
     helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
     helloLabel.regY = helloLabel.getMeasuredHeight() * 0.5;
-    helloLabel.x = 320;
-    helloLabel.y = 240;
+    helloLabel.x = config.Screen.CENTER_X;
+    helloLabel.y = CScreen.CENTER_Y;
     stage.addChild(helloLabel);
 }
 /*
