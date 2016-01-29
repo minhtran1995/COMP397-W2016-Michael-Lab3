@@ -16,7 +16,7 @@ function init() {
 }
 // Main game loop function that handle what happen each "tick or each frame
 function gameLoop(event) {
-    helloLabel.rotation += 45;
+    helloLabel.rotation += 30;
     stage.update();
 }
 function main() {
