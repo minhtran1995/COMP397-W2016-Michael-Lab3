@@ -42,11 +42,7 @@ module scene {
         //Event handler
         private _startButtonclick(event:createjs.MouseEvent){
             this._helloLabel.text = 'Game Started !';
-            var menu1:objects.Scene = new objects.Scene();
-            var gameLabel: createjs.Text;
-            gameLabel = new createjs.Text("game game", "60px Arial", "#248f24");
-            menu1.addChild(gameLabel);
-            stage.addChild(menu1);
+            
             
         }
     }

@@ -34,11 +34,6 @@ var scene;
         //Event handler
         Menu.prototype._startButtonclick = function (event) {
             this._helloLabel.text = 'Game Started !';
-            var menu1 = new objects.Scene();
-            var gameLabel;
-            gameLabel = new createjs.Text("game game", "60px Arial", "#248f24");
-            menu1.addChild(gameLabel);
-            stage.addChild(menu1);
         };
         return Menu;
     })(objects.Scene);
