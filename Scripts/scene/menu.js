@@ -13,7 +13,7 @@ var scene;
         }
         Menu.prototype.start = function () {
             console.log("Game Started !");
-            this._helloLabel = new createjs.Text("Hello World", "60px Arial", "#248f24");
+            this._helloLabel = new createjs.Text("Press To Start", "60px Arial", "#248f24");
             this._helloLabel.regX = this._helloLabel.getMeasuredWidth() * 0.5;
             this._helloLabel.regY = this._helloLabel.getMeasuredHeight() * 0.5;
             this._helloLabel.x = config.Screen.CENTER_X;
@@ -34,6 +34,11 @@ var scene;
         //Event handler
         Menu.prototype._startButtonclick = function (event) {
             this._helloLabel.text = 'Game Started !';
+            var menu1 = new objects.Scene();
+            var gameLabel;
+            gameLabel = new createjs.Text("game game", "60px Arial", "#248f24");
+            menu1.addChild(gameLabel);
+            stage.addChild(menu1);
         };
         return Menu;
     })(objects.Scene);
